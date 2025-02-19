@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PRODUCTS-ROMANA GLOBAL  </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGOOO.png" rel="icon">
+  <link href=" " rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+<style>
+  /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+table.product-table {
+  width: 80%; /* Adjust table width to 80% of the container */
+  max-width: 1200px; /* Set maximum width */
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto; /* Center the table horizontally */
+}
+
+/* Header styling */
+table.product-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+/* Cell styling */
+table.product-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Alternating row colors */
+table.product-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+table.product-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Adding stripes to rows */
+table.product-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Add padding and borders around cells */
+table.product-table td, table.product-table th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  table.product-table th,
+  table.product-table td {
+    padding: 8px; /* Decrease padding for smaller screens */
+  }
+
+  /* Stack the table headers and data into a single column on mobile */
+  table.product-table thead {
+    display: none; /* Hide the header row on small screens */
+  }
+
+  table.product-table tr {
+    display: block; /* Display each row as a block */
+    margin-bottom: 10px; /* Add space between rows */
+  }
+
+  table.product-table td {
+    display: block;
+    text-align: left; /* Align text to the left */
+    padding-left: 50%; /* Create space for labels */
+    position: relative;
+  }
+
+  table.product-table td::before {
+    content: attr(data-label); /* Add label before the content */
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-weight: bold;
+  }
+
+  /* Add a scrollable container for the table on mobile */
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+/* For very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+  table.product-table td {
+    font-size: 12px; /* Reduce font size on smaller screens */
+  }
+}
+@media screen and (max-width: 768px) {
+  #zz {
+    min-width: 100%; /* Makes the image take full width on mobile */
+    max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+  }
+}
+
+    /* General header styles */
+/* General header styles */
+#header {
+  background-color: #333; /* Dark gray background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  padding: 10px 0; /* Padding for better spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+}
+
+/* Logo Styling */
+#header .logo img {
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+/* Navigation Menu Styles */
+#navmenu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#navmenu ul li {
+  margin-left: 20px;
+}
+
+#navmenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  background-color: #ff6600; /* Highlight color on hover */
+  color: white;
+}/* General Dropdown Styles */
+#navmenu ul li.dropdown {
+  position: relative; /* For positioning the dropdown */
+}
+
+/* Dropdown Menu (Desktop) */
+#navmenu ul li.dropdown ul {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #333; /* Set background color */
+  top: 100%;
+  left: 0;
+  width: 200px; /* Adjust width */
+  z-index: 999;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown on hover (Desktop) */
+#navmenu ul li.dropdown:hover > ul {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown Links */
+#navmenu ul li.dropdown ul li {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #444;
+}
+
+#navmenu ul li.dropdown ul li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li.dropdown ul li a:hover {
+  background-color: #ff6600; /* Highlight color on hover */
+}
+
+/* Dropdown Icon (Chevron) */
+#navmenu ul li.dropdown i.bi-chevron-down {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile-specific Styles */
+@media screen and (max-width: 768px) {
+  /* Mobile Dropdown Menu */
+  #navmenu ul li.dropdown ul {
+    display: none; /* Initially hide the dropdown */
+    position: relative; /* Change to relative for correct alignment */
+    background-color: #333;
+    top: 0; /* Adjust top position */
+    left: 0;
+    width: 100%; /* Ensure the dropdown takes full width */
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile Dropdown Toggle Button */
+  .mobile-nav-toggle {
+    display: block; /* Make sure the toggle button is visible on mobile */
+    cursor: pointer;
+  }
+
+  /* Show the dropdown when the parent is clicked (Mobile) */
+  #navmenu ul li.dropdown.active > ul {
+    display: block; /* Show dropdown when parent is active */
+  }
+
+  /* Style the dropdown links for mobile */
+  #navmenu ul li.dropdown ul li {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #444;
+  }
+
+  #navmenu ul li.dropdown ul li a {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li.dropdown ul li a:hover {
+    background-color: #ff6600; /* Highlight color on hover */
+  }
+
+  /* Rotate the chevron when dropdown is active */
+  #navmenu ul li.dropdown.active i.bi-chevron-down {
+    transform: rotate(180deg); /* Rotate chevron when the dropdown is open */
+  }
+}
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  #header {
+    background-color: #333; /* Dark gray background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    padding: 10px 0; /* Padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+  }
+
+  /* Logo Styling */
+  #header .logo img {
+    min-width: 150px; /* Adjust logo size for mobile */
+    min-height: 80px; /* Adjust logo height for mobile */
+    max-width: 100%;
+  }
+
+  /* Navigation Menu Styles */
+  #navmenu {
+    display: block; /* Stack the navigation links vertically on mobile */
+    width: 100%; /* Ensure the nav takes full width */
+    padding-top: 10px; /* Padding at the top */
+  }
+
+  #navmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Stack the list items vertically */
+    width: 100%;
+  }
+
+  #navmenu ul li {
+    margin: 10px 0; /* Adjust spacing between list items on mobile */
+    text-align: center; /* Center align the menu items */
+  }
+
+  #navmenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Smaller font size for mobile */
+    text-transform: uppercase;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: block; /* Make the links take up the full width */
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li a:hover,
+  #navmenu ul li a.active {
+    background-color: #ff6600; /* Highlight color on hover */
+    color: white;
+  }
+}
+.aaaa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* Align elements vertically */
+  text-align: center;  /* Ensure all text is centered */
+ /* Full height of the viewport */
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  position: relative;
+  animation: fadeInUp 2s ease-out;
+}
+#zz {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#zz:hover {
+  transform: scale(1.1) translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+</style>
+
+ 
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"id="ss">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/romanaa.png" style=" min-width: 200px; min-height: 100px;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+
+          <li class="dropdown"><a href="#"  class="active"><span>products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+              <li><a href="Excipients.HTML">Excipients</a></li>
+              <li><a href="Laboratory Chemicals.HTML">Laboratory Chemicals / </a></li>
+              <li><a href="Laboratory Chemicals.HTML">Reagents / Microbiology </a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#team">certificate</a></li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="" href="index.html#about"></a>
+
+    </div>
+  </header>
+  <main class="main">
+
+   
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background"style="max-height: 40vh;">
+
+      <img src="assets/img/BAA.jpeg" alt="" data-aos="fade-in">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+
+            
+              <p id="cc"; >Laboratory Chemicals / Reagents / Microbiology </p>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Stats Section -->
+    <main class="aaaa">
+      <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none; ">
+    </main>
+    
+    <H3 style="text-align: center; margin: 20px;">
+        LABORATORY CHEMICALS / REAGENTS</H3>
+      <div style="text-align: center;"><img src="assets/img/images.jpeg" alt=""id="zz" ></div>     
+    <div id="AA" class="row" style="text-align: center;margin-top: 20PX;">
+      <div class="col-md-4 product-column">
+          <ul>
+              <li style="background-color:  #f0f0f0;;">2-Propanol</li>
+              <li style="background-color: #e0e0e0;">Acetone</li>
+              <li style="background-color:  #f0f0f0;">Acetonitrile</li>
+              <li style="background-color: #e0e0e0;">Acetic Acid Glacial 100%</li>
+              <li style="background-color:  #f0f0f0;">Ammonium Cerium (IV) Sulfate Dihydrate</li>
+              <li style="background-color: #e0e0e0;"> Bromocresol Indicator Green/ Blue</li>
+              <li style="background-color:  #f0f0f0;"> Carbon tetrachloride</li>
+              <li style="background-color: #e0e0e0;"> Dichloromethane</li>
+              <li style="background-color:  #f0f0f0;">Hexamethylenetetramine</li>
+          </ul>
+      </div>
+      <div class="col-md-4 product-column">
+        <ul>
+            <li style="background-color:  #f0f0f0;">Hydrochloric Acid</li>
+            <li style="background-color: #e0e0e0;">Indicators</li>
+            <li style="background-color:  #f0f0f0;">Karl Fisher Solution Pyridine Free Single Solution</li>
+            <li style="background-color: #e0e0e0;">Methanol</li>
+            <li style="background-color:  #f0f0f0;">Orthophosphoric Acid</li>
+            <li style="background-color: #e0e0e0;"> Potassium Chloride</li>
+            <li style="background-color:  #f0f0f0;">Sodium Dihydrogen Orthophosphate Anhydrous</li>
+            <li style="background-color: #e0e0e0;">Zinc powder</li>
+            <li style="background-color:  #f0f0f0;">And many more...</li>
+        </ul>
+      </div> 
+     
+  </div>
+</div>
+
+      
+</section><!-- /Stats Section -->
+<main class="aaaa">
+  <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none; ">
+</main>
+<H3 style="text-align: center; margin: 20px;">
+    MICROBIOLOGY
+</H3>
+<div style="text-align: center;"><img src="assets/img/microbiology.jpg" alt=""id="zz"></div>
+<div id="AA" class="row" style="text-align: center;margin-top: 20PX;">
+    <div class="product-column">
+        <ul>
+            <li style="background-color:  #f0f0f0;">
+                 Buffered Peptone Water</li>
+            <li style="background-color: #e0e0e0;">Cetrimide Agar</li>
+            <li style="background-color:  #f0f0f0;"> MacConkey Broth</li>
+            <li style="background-color: #e0e0e0;">Pepton Broth</li>
+            <li style="background-color:  #f0f0f0;">Potato Dextrose Agar</li>
+            <li style="background-color:#e0e0e0;">RLA Agar</li>
+            <li style="background-color:  #f0f0f0;"> Sabouraud Dextrose</li>
+            <li style="background-color: #e0e0e0;"> Soyabean Casein Digest Agar</li>
+            <li style="background-color:  #f0f0f0;">And many more...</li>
+        </ul>
+    </div>
+    
+</div>
+</div>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ROMANA GLOBAL</span>
+          </a>
+          <p>ROMANA GLOBAL is one of the leading export-oriented company specialising in exports of Active Pharmaceutical Ingredients (API), Excipients, and  Laboratory Reagents .</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="#">certificate</a></li>
+            <li><a href="contect.html">Contect</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+            <li><a href="Excipients.HTML">Excipients</a></li>
+            <li><a href="Laboratory Chemicals.HTML"> Laborator Chemicals / Reagents / Microbiology </a></li>
+
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>416/417-C Pratik Arcade,</p>
+          <p> Bhagatalav, Surat, Gujarat,</p>
+          <p>India.</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 98700 77699 / +91 98791 89757</span></p>
+          <p><strong>Email:</strong> <span>inquiry@romanaglobal.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+  
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/">abdul hai gawai</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

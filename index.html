@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>HOME-ROMANA GLOBAL</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGOOO.png " rel="icon">
+  <link href=" " rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #8a8a8a;
+      margin: 0;
+      padding: 0;
+    }
+    /* General header styles */
+/* General header styles */
+#header {
+  background-color: #333; /* Dark gray background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  padding: 10px 0; /* Padding for better spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+}
+
+/* Logo Styling */
+#header .logo img {
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+/* Navigation Menu Styles */
+#navmenu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#navmenu ul li {
+  margin-left: 20px;
+}
+
+#navmenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  background-color: #ff6600; /* Highlight color on hover */
+  color: white;
+}/* General Dropdown Styles */
+#navmenu ul li.dropdown {
+  position: relative; /* For positioning the dropdown */
+}
+
+/* Dropdown Menu (Desktop) */
+#navmenu ul li.dropdown ul {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #333; /* Set background color */
+  top: 100%;
+  left: 0;
+  width: 200px; /* Adjust width */
+  z-index: 999;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown on hover (Desktop) */
+#navmenu ul li.dropdown:hover > ul {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown Links */
+#navmenu ul li.dropdown ul li {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #444;
+}
+
+#navmenu ul li.dropdown ul li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li.dropdown ul li a:hover {
+  background-color: #ff6600; /* Highlight color on hover */
+}
+
+/* Dropdown Icon (Chevron) */
+#navmenu ul li.dropdown i.bi-chevron-down {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile-specific Styles */
+@media screen and (max-width: 950px) {
+  /* Mobile Dropdown Menu */
+  #navmenu ul li.dropdown ul {
+    display: none; /* Initially hide the dropdown */
+    position: relative; /* Change to relative for correct alignment */
+    background-color: #333;
+    top: 0; /* Adjust top position */
+    left: 0;
+    width: 100%; /* Ensure the dropdown takes full width */
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile Dropdown Toggle Button */
+  .mobile-nav-toggle {
+    display: block; /* Make sure the toggle button is visible on mobile */
+    cursor: pointer;
+  }
+
+  /* Show the dropdown when the parent is clicked (Mobile) */
+  #navmenu ul li.dropdown.active > ul {
+    display: block; /* Show dropdown when parent is active */
+  }
+
+  /* Style the dropdown links for mobile */
+  #navmenu ul li.dropdown ul li {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #444;
+  }
+
+  #navmenu ul li.dropdown ul li a {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li.dropdown ul li a:hover {
+    background-color: #ff6600; /* Highlight color on hover */
+  }
+
+  /* Rotate the chevron when dropdown is active */
+  #navmenu ul li.dropdown.active i.bi-chevron-down {
+    transform: rotate(180deg); /* Rotate chevron when the dropdown is open */
+  }
+}
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 950px) {
+  #header {
+    background-color: #333; /* Dark gray background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    padding: 10px 0; /* Padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+  }
+
+  /* Logo Styling */
+  #header .logo img {
+    min-width: 150px; /* Adjust logo size for mobile */
+    min-height: 80px; /* Adjust logo height for mobile */
+    max-width: 100%;
+  }
+
+  /* Navigation Menu Styles */
+  #navmenu {
+    display: block; /* Stack the navigation links vertically on mobile */
+    width: 100%; /* Ensure the nav takes full width */
+    padding-top: 10px; /* Padding at the top */
+  }
+
+  #navmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Stack the list items vertically */
+    width: 100%;
+  }
+
+  #navmenu ul li {
+    margin: 10px 0; /* Adjust spacing between list items on mobile */
+    text-align: center; /* Center align the menu items */
+  }
+
+  #navmenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Smaller font size for mobile */
+    text-transform: uppercase;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: block; /* Make the links take up the full width */
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li a:hover,
+  #navmenu ul li a.active {
+    background-color: #ff6600; /* Highlight color on hover */
+    color: white;
+  }
+}
+
+
+/* Mobile Navbar Styles */
+
+
+    /* Navbar Styles */
+
+
+/* Text Overlay for Video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.text-overlay span {
+  display: block;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.text-overlay span:nth-child(2) {
+  color: #ff6600;
+}
+
+.text-overlay span:nth-child(3) {
+  color: #8b1ff0;
+  margin-left: 10px;
+}
+
+
+    .main {
+      padding: 50px 0;
+    }
+
+    /* Carousel Styles */
+    .carousel-inner {
+      position: relative;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    #bb {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hero Section */
+    #cc {
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: fadeIn 2s ease-in-out;
+      background-color: rgba(245, 245, 220, 0.568);
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+   
+
+
+    #cc span {
+      margin-left: 10px;
+    }
+
+    #cc span:first-child {
+      color: aliceblue;
+      font-family: initial;
+    }
+
+    #cc span:nth-child(2) {
+      color: rgb(255, 102, 0);
+    }
+
+    #cc span:nth-child(3) {
+      color: rgb(139, 31, 240);
+    }
+
+    /* Stats Section */
+    #stats {
+      background-color: #111;
+      padding: 50px 0;
+    }
+
+    #stats img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+
+    #stats .container {
+      color: white;
+    }
+
+    #stats .text-center {
+      font-size: 18px;
+    }
+
+    #stats p {
+      font-size: 1.2em;
+      color: rgb(255, 102, 0);
+      margin-bottom: 20px;
+    }
+
+    #stats a button {
+      color: rgb(139, 31, 240);
+      background-color: rgb(255, 102, 0);
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bolder;
+      border-radius: 25px;
+      padding: 10px;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    #stats a button:hover {
+      background-color: rgb(139, 31, 240);
+      color: white;
+    }
+
+    /* Recent Posts Section */
+    #recent-posts {
+      padding: 50px 0;
+    }
+
+    #recent-posts .container {
+      color: #333;
+    }
+
+    #recent-posts .section-title h2 {
+      color: rgb(139, 31, 240);
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #recent-posts .post-img img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    #recent-posts .post-img img:hover {
+      transform: scale(1.05);
+    }
+
+    #recent-posts .post-meta p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    #recent-posts .title a {
+      color: rgb(255, 102, 0);
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #recent-posts .title a:hover {
+      color: rgb(139, 31, 240);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 950px) {
+      #cc {
+        font-size: 30px;
+      }
+
+      #stats .text-center {
+        font-size: 1.2em;
+      }
+
+      #recent-posts .section-title h2 {
+        font-size: 1.8em;
+      }
+
+      #recent-posts .col-xl-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      #recent-posts .post-meta p {
+        font-size: 12px;
+      }
+
+      #recent-posts .title a {
+        font-size: 1.3em;
+      }
+
+      #recent-posts .post-img img {
+        max-height: 200px;
+        object-fit: cover;
+      }
+      .video-container {
+    position: relative;
+    width: 100%;
+    height: 50vw; /* Adjusted height to maintain aspect ratio on mobile */
+    overflow: hidden;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Text Overlay Styling */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .text-overlay span {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .text-overlay span:nth-child(2) {
+    color: #ff6600;
+  }
+
+  .text-overlay span:nth-child(3) {
+    color: #8b1ff0;
+    margin-left: 10px;
+  }
+
+      #ww{
+       font-size: 25px;
+      }
+  
+    }
+
+    /* Smooth scroll effect for navigation */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: invert(100%);
+    }
+
+    /* Hover Effects for Buttons */
+    button:hover {
+      cursor: pointer;
+    }
+
+    .video-container {
+      position: relative;
+      background-size: cover;
+
+      margin: auto;
+    }
+
+    video {
+
+      background-size: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"id="ss">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="assets/img/romanaa.png" style=" min-width: 200px; min-height: 100px;">
+        </a>
+  
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+  
+  
+            <li class="dropdown" ><a href="#"><span>products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li style="background-color: #333; "><a href="Active Pharmaceutical Ingredients.HTML" style="font-size: 15px;">Active Pharmaceutical  Ingredients</a></li>
+                <li style="background-color: #333;"><a href="Excipients.HTML" style="font-size: 15px;">Excipients</a></li>
+                <li style="background-color: #333;"><a href="Laboratory Chemicals.HTML" style="font-size: 15px;">Laboratory Chemicals / </a></li>
+                <li style="background-color: #333;" ><a href="Laboratory Chemicals.HTML" style="font-size: 15px;">Reagents / Microbiology </a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#team">certificate</a></li>
+            <li><a href="contect.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+  
+        <a class="" href="index.html#about"></a>
+  
+      </div>
+    </header>
+
+  <main class="main">
+    <div class="video-container">
+      <img src="assets/img/a.jpg" alt="" style="background-size: cover;width: 100%;" > 
+      <div class="text-overlay" id="ww" style="color: rgb(255, 255, 255); font-family: initial;"> ROMANA GLOBAL
+   
+      </div>
+    </div>
+
+
+
+
+    </section><!-- /Hero Section -->
+
+
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background">
+
+      <img src="assets/img/pharmaceutical.jpeg" alt="" data-aos="fade-in">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+
+              <p style="font-size: larger; color: rgb(255, 255, 255);font-family: initial;">ROMANA GLOBAL <span style="color: aliceblue;">is one of the
+                  leading export-oriented company
+                  specializing in exports of Active
+                  Pharmaceutical Ingredients (API), Excipients, Pharmaceutical and Laboratory Reagents
+
+                  .</span></p>
+              <p style="font-size: larger; color: rgb(255, 255, 255);font-family: initial;">ROMANA GLOBAL <span style="color: aliceblue;"> covers a vast market
+                  and supplies to
+                  customers across Soudi and the
+                  Middle East with Ghana, Kenya, Uganda, Malawi, Zambia being some of the key markets.</span></p>
+
+              <a href="about.html"><button style=" color: rgb(255, 255, 255); background-color:  rgb(247, 136, 62); font-size: 15px; font-family:initial; font-weight: bolder;
+                  border-radius: 25px; padding: 10px; border: none;">Read
+                  More</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: rgb(139, 31, 240);;">PRODUCTS</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/Active Pharmaceutical Ingredient.jpg" alt="" id="as">
+              </div>
+
+              <h2 class="title" style="font-size: 12PX; margin-top: 20PX;">
+                <a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a>
+              </h2>
+
+              <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none;">
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">Aspirin, Artmether, Ciprofloxacin, Ibuprofen, Diclofenac Sodium etc.</p>
+
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/AAA.jpg" alt="" id="as">
+              </div>
+
+
+              <h2 class="title" style="font-size: 12PX; margin-top: 20PX;">
+                <a href="Excipients.HTML" style="height: 200px;">Excipients</a>
+              </h2>
+              <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none;">
+              <div class="d-flex align-items-center">
+
+                <div class="post-meta">
+                  <p class="post-author">Ammonium Chloride, Arachis Oil, Aspartame… </p>
+
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/Laborator Chemicals.jpg" alt="" id="as">
+              </div>
+
+
+
+              <h2 class="title" style="font-size: 12PX; margin-top: 20PX;">
+                <a href="Laboratory Chemicals.HTML">
+                  Chemicals / Reagents / Microbiology </a>
+              </h2>
+              <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none;">
+              <div class="d-flex align-items-center">
+
+                <div class="post-meta">
+                  <p class="post-author">2-Propanol, Acetone, Indicators…</p>
+
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+        </div><!-- End recent posts list -->
+
+      </div>
+
+    </section><!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ROMANA GLOBAL</span>
+          </a>
+          <p>ROMANA GLOBAL is one of the leading export-oriented company specialising in exports of Active Pharmaceutical Ingredients (API), Excipients, and  Laboratory Reagents .</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="#">certificate</a></li>
+            <li><a href="contect.html">Contect</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+            <li><a href="Excipients.HTML">Excipients</a></li>
+            <li><a href="Laboratory Chemicals.HTML"> Laborator Chemicals / Reagents / Microbiology </a></li>
+
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>416/417-C Pratik Arcade,</p>
+          <p> Bhagatalav, Surat, Gujarat,</p>
+          <p>India.</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 98700 77699 / +91 98791 89757</span></p>
+          <p><strong>Email:</strong> <span>inquiry@romanaglobal.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+  
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/">abdul hai gawai</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

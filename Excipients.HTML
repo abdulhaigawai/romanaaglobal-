@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> PRODUCTS-ROMANA GLOBAL </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGOOO.png" rel="icon">
+  <link href=" " rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Overall container styling */
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  animation: fadeInBody 3s ease-out; /* Fade in animation for the body */
+}
+
+/* Main content area */
+table.product-table {
+  width: 80%; /* Adjust table width to 80% of the container */
+  max-width: 1200px; /* Set maximum width */
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto; /* Center the table horizontally */
+}
+
+/* Header styling */
+table.product-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+/* Cell styling */
+table.product-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Alternating row colors */
+table.product-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+table.product-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Adding stripes to rows */
+table.product-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Add padding and borders around cells */
+table.product-table td, table.product-table th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  table.product-table th,
+  table.product-table td {
+    padding: 8px; /* Decrease padding for smaller screens */
+  }
+
+  /* Stack the table headers and data into a single column on mobile */
+  table.product-table thead {
+    display: none; /* Hide the header row on small screens */
+  }
+
+  table.product-table tr {
+    display: block; /* Display each row as a block */
+    margin-bottom: 10px; /* Add space between rows */
+  }
+
+  table.product-table td {
+    display: block;
+    text-align: left; /* Align text to the left */
+    padding-left: 50%; /* Create space for labels */
+    position: relative;
+  }
+
+  table.product-table td::before {
+    content: attr(data-label); /* Add label before the content */
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-weight: bold;
+  }
+
+  /* Add a scrollable container for the table on mobile */
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+/* For very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+  table.product-table td {
+    font-size: 12px; /* Reduce font size on smaller screens */
+  }
+}
+
+    /* General header styles */
+/* General header styles */
+#header {
+  background-color: #333; /* Dark gray background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  padding: 10px 0; /* Padding for better spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+}
+
+/* Logo Styling */
+#header .logo img {
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+/* Navigation Menu Styles */
+#navmenu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#navmenu ul li {
+  margin-left: 20px;
+}
+
+#navmenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  background-color: #ff6600; /* Highlight color on hover */
+  color: white;
+}/* General Dropdown Styles */
+#navmenu ul li.dropdown {
+  position: relative; /* For positioning the dropdown */
+}
+
+/* Dropdown Menu (Desktop) */
+#navmenu ul li.dropdown ul {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #333; /* Set background color */
+  top: 100%;
+  left: 0;
+  width: 200px; /* Adjust width */
+  z-index: 999;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown on hover (Desktop) */
+#navmenu ul li.dropdown:hover > ul {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown Links */
+#navmenu ul li.dropdown ul li {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #444;
+}
+
+#navmenu ul li.dropdown ul li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li.dropdown ul li a:hover {
+  background-color: #ff6600; /* Highlight color on hover */
+}
+
+/* Dropdown Icon (Chevron) */
+#navmenu ul li.dropdown i.bi-chevron-down {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile-specific Styles */
+@media screen and (max-width: 768px) {
+  /* Mobile Dropdown Menu */
+  #navmenu ul li.dropdown ul {
+    display: none; /* Initially hide the dropdown */
+    position: relative; /* Change to relative for correct alignment */
+    background-color: #333;
+    top: 0; /* Adjust top position */
+    left: 0;
+    width: 100%; /* Ensure the dropdown takes full width */
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile Dropdown Toggle Button */
+  .mobile-nav-toggle {
+    display: block; /* Make sure the toggle button is visible on mobile */
+    cursor: pointer;
+  }
+
+  /* Show the dropdown when the parent is clicked (Mobile) */
+  #navmenu ul li.dropdown.active > ul {
+    display: block; /* Show dropdown when parent is active */
+  }
+
+  /* Style the dropdown links for mobile */
+  #navmenu ul li.dropdown ul li {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #444;
+  }
+
+  #navmenu ul li.dropdown ul li a {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li.dropdown ul li a:hover {
+    background-color: #ff6600; /* Highlight color on hover */
+  }
+
+  /* Rotate the chevron when dropdown is active */
+  #navmenu ul li.dropdown.active i.bi-chevron-down {
+    transform: rotate(180deg); /* Rotate chevron when the dropdown is open */
+  }
+}
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  #header {
+    background-color: #333; /* Dark gray background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    padding: 10px 0; /* Padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+  }
+
+  /* Logo Styling */
+  #header .logo img {
+    min-width: 150px; /* Adjust logo size for mobile */
+    min-height: 80px; /* Adjust logo height for mobile */
+    max-width: 100%;
+  }
+
+  /* Navigation Menu Styles */
+  #navmenu {
+    display: block; /* Stack the navigation links vertically on mobile */
+    width: 100%; /* Ensure the nav takes full width */
+    padding-top: 10px; /* Padding at the top */
+  }
+
+  #navmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Stack the list items vertically */
+    width: 100%;
+  }
+
+  #navmenu ul li {
+    margin: 10px 0; /* Adjust spacing between list items on mobile */
+    text-align: center; /* Center align the menu items */
+  }
+
+  #navmenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Smaller font size for mobile */
+    text-transform: uppercase;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: block; /* Make the links take up the full width */
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  #navmenu ul li a:hover,
+  #navmenu ul li a.active {
+    background-color: #ff6600; /* Highlight color on hover */
+    color: white;
+  }
+}
+.aaaa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* Align elements vertically */
+  text-align: center;  /* Ensure all text is centered */
+ /* Full height of the viewport */
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  position: relative;
+  animation: fadeInUp 2s ease-out;
+}
+#zz {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#zz:hover {
+  transform: scale(1.1) translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+  </style>
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"id="ss">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/romanaa.png" style=" min-width: 200px; min-height: 100px;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+
+          <li class="dropdown"><a href="#"class="active"><span>products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+              <li><a href="Excipients.HTML">Excipients</a></li>
+              <li><a href="Laboratory Chemicals.HTML">Laboratory Chemicals / </a></li>
+              <li><a href="Laboratory Chemicals.HTML">Reagents / Microbiology </a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#team">certificate</a></li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="" href="index.html#about"></a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+   
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background"style="max-height: 40vh;">
+
+      <img src="assets/img/BAA.jpeg" alt="" data-aos="fade-in">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+
+            
+              <p id="cc"> EXCIPIENTS</p>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Stats Section -->
+    <main class="aaaa">
+      <hr style="width: 60px; height: 4px; background-color:rgb(64, 4, 121) ; border: none; ">
+    </main>
+    <H3 style="text-align: center; margin: 20px;"> EXCIPIENTS</H3>
+    <div style="text-align: center;"><img src="assets/img/awww.jpg" alt=""id="zz"></div>    
+
+    <div class="row" style="text-align: center; margin-top: 20PX;" >
+      <div class="col-md-3 product-column">
+          <ul>
+              <li style="background-color: #f0f0f0;"> Ammonium Chloride</li>
+              <li style="background-color: #e0e0e0;;">Arachis Oil</li>
+              <li style="background-color:#f0f0f0;">Aspartame</li>
+              <li style="background-color: #e0e0e0;">Bees Wax</li>
+              <li style="background-color: #f0f0f0;">Benzyl Benzoate</li>
+              <li style="background-color: #e0e0e0;">Betacyclodextrin</li>
+              <li style="background-color:#f0f0f0;">Boric Acid</li>
+              <li style="background-color:#e0e0e0;"> Bromhexine HCL</li>
+              <li style="background-color: #f0f0f0;">Bronopol</li>
+              <li style="background-color: #e0e0e0;"> Calamine Powder</li>
+              <li style="background-color: #f0f0f0;">Calcium Carbonate</li>
+              <li style="background-color: #e0e0e0;">Calcium Chloride</li>
+              <li style="background-color:#f0f0f0;"> Camphor</li>
+              <li style="background-color: #e0e0e0;">Capsicum Oleoresin </li>
+              <li style="background-color: #f0f0f0;"> Caraway Oil</li>
+              <li style="background-color:#e0e0e0;"> Carbon Tetra Chloride</li>
+              <li style="background-color: #f0f0f0;"> Castor Oil</li>
+              <li style="background-color: #e0e0e0;">Cetrimide</li>
+              <li style="background-color: #f0f0f0;"> Cellulose Acetate Phthalate</li>
+              <li style="background-color: #e0e0e0;"> Ceto stearyl alcohol</li>
+              <li style="background-color: #f0f0f0;"> Cetomacrogol 100</li>
+              <li style="background-color: #e0e0e0;"> Cetyl Alcohol</li>
+              <li style="background-color: #f0f0f0;">Cetyl Pyridinium Chloride USP</li>
+              <li style="background-color: #e0e0e0;"> Chloro Cresol</li>
+              <li style="background-color: #f0f0f0;">Chloroform</li>
+              <li style="background-color: #e0e0e0;">Chlorhexidine Gluconate</li>
+              <li style="background-color: #f0f0f0;">Chloroquine Phosphate / Sulphate</li>
+              <li style="background-color: #e0e0e0;"> Citric Acid Anhydrous</li>
+              <li style="background-color: #f0f0f0;"> Citric Acid Monohydrate</li>
+              <li style="background-color: #e0e0e0;">  Clomiphene Citrate</li>
+              <li style="background-color: #f0f0f0;">Clove Oil</li>
+          </ul>
+      </div>
+      <div class="col-md-3 product-column">
+        <ul>
+          <li style="background-color: #f0f0f0;">Colloidal Slicon Dioxide</li>
+          <li style="background-color: #e0e0e0;">Creosote Oil</li>
+          <li style="background-color: #f0f0f0;">Cross Povidone</li>
+          <li style="background-color: #e0e0e0;">Crosscarmellose Sodium</li>
+          <li style="background-color: #f0f0f0;">Crystal Voilet</li>
+          <li style="background-color: #e0e0e0;"> Dexamethasone</li>
+          <li style="background-color: #f0f0f0;">Dextrose Anhydrous</li>
+          <li style="background-color: #e0e0e0;">Dextrose Monohydrate</li>
+          <li style="background-color: #f0f0f0;"> Dicalcium Phosphate</li>
+          <li style="background-color: #e0e0e0;">  Dummy Pellets / NPS</li>
+          <li style="background-color: #f0f0f0;"> Diethyl Pthalate</li>
+          <li style="background-color: #e0e0e0;;"> Disodium EDTA</li>
+          <li style="background-color: #f0f0f0;">Emulsifying Wax</li>
+          <li style="background-color: #e0e0e0;">Ethyl Cellulose</li>
+          <li style="background-color: #f0f0f0;">Eucalyptus Oil</li>
+          <li style="background-color: #e0e0e0;">Ferrous Fumarate</li>
+          <li style="background-color: #f0f0f0;">Ferrouse Gluconate</li>
+          <li style="background-color: #e0e0e0;">Gelatine Powder</li>
+          <li style="background-color: #f0f0f0;">  Guar Gum</li>
+          <li style="background-color:#e0e0e0;;"> Guaifenesin</li>
+          <li style="background-color:#f0f0f0;"> Gum Accacia</li>
+          <li style="background-color: #e0e0e0;">  Hydrogen Peroxide</li>
+          <li style="background-color: #f0f0f0;"> Hydroxy Ethyl Cellulose</li>
+          <li style="background-color: #e0e0e0;">Hydroxy Propyl Methyl Cellulose</li>
+          <li style="background-color: #f0f0f0;"> Hyflosupercell</li>
+          <li style="background-color: #e0e0e0;">Imidazole</li>
+          <li style="background-color: #f0f0f0;">Iodine</li>
+          <li style="background-color: #e0e0e0;">Iron (III) Polymaltose</li>
+          <li style="background-color:#f0f0f0;">Isopropyl Alcohol</li>
+          <li style="background-color: #e0e0e0;">  Klucel LF Pharm</li>
+          <li style="background-color: #f0f0f0;">Kollidon CLF</li>
+      </ul>
+      </div> 
+      <div class="col-md-3 product-column">
+        <ul>
+          <li style="background-color: #f0f0f0;">Kolliphor SLS Fine</li>
+          <li style="background-color: #e0e0e0;">Lactic Acid</li>
+          <li style="background-color: #f0f0f0;"> Lactose Monohydrate</li>
+          <li style="background-color: #e0e0e0;">Light Magnesium Carbonate</li>
+          <li style="background-color: #f0f0f0;">Liquid Glucose</li>
+          <li style="background-color: #e0e0e0;">  Liquid Paraffin Heavy / Light</li>
+          <li style="background-color: #f0f0f0;"> Magnesium Hydroxide</li>
+          <li style="background-color: #e0e0e0;;">Magnesium Stearate</li>
+          <li style="background-color: #f0f0f0;">Magnesium Trisilicate</li>
+          <li style="background-color: #e0e0e0;"> Maize Starch</li>
+          <li style="background-color: #f0f0f0;"> Malt Extract</li>
+          <li style="background-color: #e0e0e0;"> Mannitol</li>
+          <li style="background-color: #f0f0f0;"> Menthol</li>
+          <li style="background-color: #e0e0e0;">Methylene Chloride</li>
+          <li style="background-color: #f0f0f0;">Methyl Paraben</li>
+          <li style="background-color: #e0e0e0;">Methyl Salicylate</li>
+          <li style="background-color: #f0f0f0;"> Microcrystalline Cellulose Powder</li>
+          <li style="background-color: #e0e0e0;;">Microcrystalline Wax</li>
+          <li style="background-color: #f0f0f0;">Paraffin Wax</li>
+          <li style="background-color: #e0e0e0;;">PEG6000/4000</li>
+          <li style="background-color: #f0f0f0;">Peppermint Oil</li>
+          <li style="background-color:#e0e0e0;">Phenol</li>
+          <li style="background-color: #f0f0f0;"> Potassium Sorbate</li>
+          <li style="background-color: #e0e0e0;"> Potassium Chloride</li>
+          <li style="background-color: #f0f0f0;">Pre Geletanised Starch</li>
+          <li style="background-color: #e0e0e0;">Propyl Paraben</li>
+          <li style="background-color: #f0f0f0;;">Propylene Glycol</li>
+          <li style="background-color: #e0e0e0;">Purified Talc</li>
+          <li style="background-color: #f0f0f0;"> PVP K 25/30/9O</li>
+          <li style="background-color: #e0e0e0;">PVP Iodine</li>
+          <li style="background-color: #f0f0f0;">Simethicone Emulsion</li>
+      </ul>
+      </div>
+      <div class="col-md-3 product-column">
+        <ul>
+          <li style="background-color: #f0f0f0;">Sodium Benzoate</li>
+          <li style="background-color: #e0e0e0;">Sodium Bicarbonate</li>
+          <li style="background-color: #f0f0f0;">Sodium Chloride</li>
+          <li style="background-color: #e0e0e0;">Sodium Citrate</li>
+          <li style="background-color: #f0f0f0;">Sodium CMC</li>
+          <li style="background-color: #e0e0e0;">Sodium Lauryl Sulphate</li>
+          <li style="background-color: #f0f0f0;">Sodium Metabisulphite</li>
+          <li style="background-color: #e0e0e0;"> Sodium Methyl Paraben</li>
+          <li style="background-color: #f0f0f0;"> Sodium Phosphate </li>
+          <li style="background-color: #e0e0e0;"> Sodium Propyl Paraben</li>
+          <li style="background-color: #f0f0f0;">Sodium Saccharin</li>
+          <li style="background-color:#e0e0e0;"> Sodium Starch Glycollate</li>
+          <li style="background-color: #f0f0f0;">Sodium Stearyl Fumarate</li>
+          <li style="background-color: #e0e0e0;">Sorbic Acid</li>
+          <li style="background-color: #f0f0f0;"> Sorbitol 70%</li>
+          <li style="background-color: #e0e0e0;"> Stearic Acid</li>
+          <li style="background-color: #f0f0f0;"> Sucrose</li>
+          <li style="background-color: #e0e0e0;"> Sulphur Powder</li>
+          <li style="background-color: #f0f0f0;"> Terbutaline Sulphate</li>
+          <li style="background-color: #e0e0e0;">Thymol</li>
+          <li style="background-color:#f0f0f0;"> Titanium Dioxide</li>
+          <li style="background-color: #e0e0e0;"> Tribasic Calcium Phosphate</li>
+          <li style="background-color: #f0f0f0;">  Turpentine Oil</li>
+          <li style="background-color: #e0e0e0;">  Tween 80</li>
+          <li style="background-color: #f0f0f0;">White Petroleum Jelly</li>
+          <li style="background-color: #e0e0e0;">White Soft Parafin Wax</li>
+          <li style="background-color: #f0f0f0;"> Xanthum Gum</li>
+          <li style="background-color: #e0e0e0;"> Zinc Carbonate</li>
+          <li style="background-color: #f0f0f0;"> Zinc Oxide</li>
+          <li style="background-color: #e0e0e0;">Zinc Sulphate (Hepta / Mono)</li>
+          <li style="background-color: #f0f0f0;">And many more...
+          </li>
+      </ul>
+      </div> 
+  </div>
+</div>
+
+      
+
+     
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ROMANA GLOBAL</span>
+          </a>
+          <p>ROMANA GLOBAL is one of the leading export-oriented company specialising in exports of Active Pharmaceutical Ingredients (API), Excipients, and  Laboratory Reagents .</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="#">certificate</a></li>
+            <li><a href="contect.html">Contect</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+            <li><a href="Excipients.HTML">Excipients</a></li>
+            <li><a href="Laboratory Chemicals.HTML"> Laborator Chemicals / Reagents / Microbiology </a></li>
+
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>416/417-C Pratik Arcade,</p>
+          <p> Bhagatalav, Surat, Gujarat,</p>
+          <p>India.</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 98700 77699 / +91 98791 89757</span></p>
+          <p><strong>Email:</strong> <span>inquiry@romanaglobal.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+  
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/">abdul hai gawai</a>
+      </div>
+    </div>
+
+  </footer> <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ROMANA GLOBAL</span>
+          </a>
+          <p>ROMANA GLOBAL is one of the leading export-oriented company specialising in exports of Active Pharmaceutical Ingredients (API), Excipients, and  Laboratory Reagents .</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="#">certificate</a></li>
+            <li><a href="contect.html">Contect</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="Active Pharmaceutical Ingredients.HTML">Active Pharmaceutical Ingredients</a></li>
+            <li><a href="Excipients.HTML">Excipients</a></li>
+            <li><a href="Laboratory Chemicals.HTML"> Laborator Chemicals / Reagents / Microbiology </a></li>
+
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>416/417-C Pratik Arcade,</p>
+          <p> Bhagatalav, Surat, Gujarat,</p>
+          <p>India.</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 98700 77699 / +91 98791 89757</span></p>
+          <p><strong>Email:</strong> <span>inquiry@romanaglobal.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+  
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/">abdul hai gawai</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
