@@ -278,10 +278,41 @@
 
 #ll {
   width: 100%; /* Image ko container ke hisaab se fit karna */
-  max-width: 200px; /* Maximum width 200px rakhein */
-  height: auto; /* Aspect ratio maintain karna */
+  max-width: 300px; /* Maximum width 200px rakhein */
+  height: 400px; /* Aspect ratio maintain karna */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+#pdf-container {
+    display: flex;               /* Using flexbox to layout the iframes */
+    flex-wrap: wrap;             /* Allows wrapping of content when needed */
+    gap: 20px;                   /* Adds space between iframes */
+    justify-content: center;     /* Centers the iframes horizontally */
+    align-items: center;         /* Centers the iframes vertically */
+    margin: 20px;
+}
+
+.pdf-iframe {
+    width: 100%;                 /* Make iframe responsive */
+    max-width: 300px;            /* Maximum width */
+    height: 400px;               /* Fixed height */
+    border: none;                /* Removes border for a cleaner look */
+    border-radius: 10px;         /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for the iframe */
+}
+
+/* Make iframes stack vertically on smaller screens */
+@media (max-width: 768px) {
+    #pdf-container {
+        flex-direction: column;  /* Stack iframes vertically */
+        align-items: center;     /* Center vertically */
+    }
+
+    .pdf-iframe {
+        max-width: 90%;          /* Adjust iframe size on smaller screens */
+        height: 400px;           /* Set a slightly larger height for mobile */
+    }
 }
 
     </style>
@@ -322,6 +353,7 @@
   
       </div>
     </header>
+ 
   
     <main class="main">
   
@@ -356,10 +388,15 @@
       <img src="Untitled-3.jpg" alt=""id="ll">
       <img src="4.jpeg" alt=""id="ll">
       <img src="5.jpeg" alt=""id="ll">
+     
+
+
     </div>
     
-  
-
+    <div id="pdf-container">
+        <iframe src="Romana Global GST 6.pdf" class="pdf-iframe"></iframe>
+        <iframe src="Romana Global Udyam Updated 5.pdf" class="pdf-iframe"></iframe>
+    </div>
     
     
     
