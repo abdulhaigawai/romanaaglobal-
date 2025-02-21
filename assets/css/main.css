@@ -228,6 +228,7 @@ h6 {
   height: 100vh; 
 }
 #zz{ width: 700px;}
+
 @media(max-width:1100px){
   #cc{ margin-bottom: 200px; }
 }
@@ -417,8 +418,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: white;
+  background-color: #333;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -459,14 +460,14 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: white;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--heading-color);
+  border-color: black;
 }
 
 .footer h4 {
@@ -503,7 +504,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgb(248, 248, 248);
   display: inline-block;
   line-height: 1;
 }
@@ -519,7 +520,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: rgb(75, 72, 72);
 }
 
 .footer .copyright p {
