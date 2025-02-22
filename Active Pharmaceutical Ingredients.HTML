@@ -134,212 +134,249 @@ table.product-table td, table.product-table th {
     /* General header styles */
 /* General header styles */
 #header {
-  background-color: #333; /* Dark gray background */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures the navbar stays on top of other elements */
-  padding: 10px 0; /* Padding for better spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
-}
+      background-color: #333;
+      /* Dark gray background */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      /* Ensures the navbar stays on top of other elements */
+      padding: 10px 0;
+      /* Padding for better spacing */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      /* Optional shadow for visual effect */
+    }
 
-/* Logo Styling */
-#header .logo img {
-  min-width: 200px;
-  min-height: 100px;
-  max-width: 100%;
-}
+    /* Logo Styling */
+    #header .logo img {
+      min-width: 200px;
+      min-height: 100px;
+      max-width: 100%;
+    }
 
-/* Navigation Menu Styles */
-#navmenu {
-  display: flex;
-  justify-content: flex-end;
-}
+    /* Navigation Menu Styles */
+    #navmenu {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-#navmenu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
+    #navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
 
-#navmenu ul li {
-  margin-left: 20px;
-}
+    #navmenu ul li {
+      margin-left: 20px;
+    }
 
-#navmenu ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+    #navmenu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-#navmenu ul li a:hover,
-#navmenu ul li a.active {
-  background-color: #ff6600; /* Highlight color on hover */
-  color: white;
-}/* General Dropdown Styles */
-#navmenu ul li.dropdown {
-  position: relative; /* For positioning the dropdown */
-}
+    #navmenu ul li a:hover,
+    #navmenu ul li a.active {
+      background-color: #ff6600;
+      /* Highlight color on hover */
+      color: white;
+    }
 
-/* Dropdown Menu (Desktop) */
-#navmenu ul li.dropdown ul {
-  display: none; /* Initially hide the dropdown */
-  position: absolute;
-  background-color: #333; /* Set background color */
-  top: 100%;
-  left: 0;
-  width: 200px; /* Adjust width */
-  z-index: 999;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    /* General Dropdown Styles */
+    #navmenu ul li.dropdown {
+      position: relative;
+      /* For positioning the dropdown */
+    }
 
-/* Show dropdown on hover (Desktop) */
-#navmenu ul li.dropdown:hover > ul {
-  display: block; /* Show dropdown on hover */
-}
+    /* Dropdown Menu (Desktop) */
+    #navmenu ul li.dropdown ul {
+      display: none;
+      /* Initially hide the dropdown */
+      position: absolute;
+      background-color: #333;
+      /* Set background color */
+      top: 100%;
+      left: 0;
+      width: 200px;
+      /* Adjust width */
+      z-index: 999;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-/* Dropdown Links */
-#navmenu ul li.dropdown ul li {
-  padding: 10px;
-  text-align: left;
-  border-top: 1px solid #444;
-}
+    /* Show dropdown on hover (Desktop) */
+    #navmenu ul li.dropdown:hover>ul {
+      display: block;
+      /* Show dropdown on hover */
+    }
 
-#navmenu ul li.dropdown ul li a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
+    /* Dropdown Links */
+    #navmenu ul li.dropdown ul li {
+      padding: 10px;
+      text-align: left;
+      border-top: 1px solid #444;
+    }
 
-#navmenu ul li.dropdown ul li a:hover {
-  background-color: #ff6600; /* Highlight color on hover */
-}
+    #navmenu ul li.dropdown ul li a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-/* Dropdown Icon (Chevron) */
-#navmenu ul li.dropdown i.bi-chevron-down {
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
+    #navmenu ul li.dropdown ul li a:hover {
+      background-color: #ff6600;
+      /* Highlight color on hover */
+    }
 
-/* Mobile-specific Styles */
-@media screen and (max-width: 768px) {
-  /* Mobile Dropdown Menu */
-  #navmenu ul li.dropdown ul {
-    display: none; /* Initially hide the dropdown */
-    position: relative; /* Change to relative for correct alignment */
-    background-color: #333;
-    top: 0; /* Adjust top position */
-    left: 0;
-    width: 100%; /* Ensure the dropdown takes full width */
-    z-index: 999;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
+    /* Dropdown Icon (Chevron) */
+    #navmenu ul li.dropdown i.bi-chevron-down {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
 
-  /* Mobile Dropdown Toggle Button */
-  .mobile-nav-toggle {
-    display: block; /* Make sure the toggle button is visible on mobile */
-    cursor: pointer;
-  }
+    /* Mobile-specific Styles */
+    @media screen and (max-width: 768px) {
 
-  /* Show the dropdown when the parent is clicked (Mobile) */
-  #navmenu ul li.dropdown.active > ul {
-    display: block; /* Show dropdown when parent is active */
-  }
+      /* Mobile Dropdown Menu */
+      #navmenu ul li.dropdown ul {
+        display: none;
+        /* Initially hide the dropdown */
+        position: relative;
+        /* Change to relative for correct alignment */
+        background-color: #333;
+        top: 0;
+        /* Adjust top position */
+        left: 0;
+        width: 100%;
+        /* Ensure the dropdown takes full width */
+        z-index: 999;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
 
-  /* Style the dropdown links for mobile */
-  #navmenu ul li.dropdown ul li {
-    padding: 10px;
-    text-align: left;
-    border-top: 1px solid #444;
-  }
+      /* Mobile Dropdown Toggle Button */
+      .mobile-nav-toggle {
+        display: block;
+        /* Make sure the toggle button is visible on mobile */
+        cursor: pointer;
+      }
 
-  #navmenu ul li.dropdown ul li a {
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
+      /* Show the dropdown when the parent is clicked (Mobile) */
+      #navmenu ul li.dropdown.active>ul {
+        display: block;
+        /* Show dropdown when parent is active */
+      }
 
-  #navmenu ul li.dropdown ul li a:hover {
-    background-color: #ff6600; /* Highlight color on hover */
-  }
+      /* Style the dropdown links for mobile */
+      #navmenu ul li.dropdown ul li {
+        padding: 10px;
+        text-align: left;
+        border-top: 1px solid #444;
+      }
 
-  /* Rotate the chevron when dropdown is active */
-  #navmenu ul li.dropdown.active i.bi-chevron-down {
-    transform: rotate(180deg); /* Rotate chevron when the dropdown is open */
-  }
-}
+      #navmenu ul li.dropdown ul li a {
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      #navmenu ul li.dropdown ul li a:hover {
+        background-color: #ff6600;
+        /* Highlight color on hover */
+      }
+
+      /* Rotate the chevron when dropdown is active */
+      #navmenu ul li.dropdown.active i.bi-chevron-down {
+        transform: rotate(180deg);
+        /* Rotate chevron when the dropdown is open */
+      }
+    }
 
 
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
-  #header {
-    background-color: #333; /* Dark gray background */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensures the navbar stays on top of other elements */
-    padding: 10px 0; /* Padding for better spacing */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
-  }
+    /* Mobile-specific styles */
+    @media screen and (max-width: 768px) {
+      #header {
+        background-color: #333;
+        /* Dark gray background */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Ensures the navbar stays on top of other elements */
+        padding: 10px 0;
+        /* Padding for better spacing */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Optional shadow for visual effect */
+      }
 
-  /* Logo Styling */
-  #header .logo img {
-    min-width: 150px; /* Adjust logo size for mobile */
-    min-height: 80px; /* Adjust logo height for mobile */
-    max-width: 100%;
-  }
+      /* Logo Styling */
+      #header .logo img {
+        min-width: 150px;
+        /* Adjust logo size for mobile */
+        min-height: 80px;
+        /* Adjust logo height for mobile */
+        max-width: 100%;
+      }
 
-  /* Navigation Menu Styles */
-  #navmenu {
-    display: block; /* Stack the navigation links vertically on mobile */
-    width: 100%; /* Ensure the nav takes full width */
-    padding-top: 10px; /* Padding at the top */
-  }
+      /* Navigation Menu Styles */
+      #navmenu {
+        display: block;
+        /* Stack the navigation links vertically on mobile */
+        width: 100%;
+        /* Ensure the nav takes full width */
+        padding-top: 10px;
+        /* Padding at the top */
+      }
 
-  #navmenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: block; /* Stack the list items vertically */
-    width: 100%;
-  }
+      #navmenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        /* Stack the list items vertically */
+        width: 100%;
+      }
 
-  #navmenu ul li {
-    margin: 10px 0; /* Adjust spacing between list items on mobile */
-    text-align: center; /* Center align the menu items */
-  }
+      #navmenu ul li {
+        margin: 10px 0;
+        /* Adjust spacing between list items on mobile */
+        text-align: center;
+        /* Center align the menu items */
+      }
 
-  #navmenu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px; /* Smaller font size for mobile */
-    text-transform: uppercase;
-    padding: 12px 15px;
-    border-radius: 5px;
-    display: block; /* Make the links take up the full width */
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
+      #navmenu ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        /* Smaller font size for mobile */
+        text-transform: uppercase;
+        padding: 12px 15px;
+        border-radius: 5px;
+        display: block;
+        /* Make the links take up the full width */
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
 
-  #navmenu ul li a:hover,
-  #navmenu ul li a.active {
-    background-color: #ff6600; /* Highlight color on hover */
-    color: white;
-  }
-}
+      #navmenu ul li a:hover,
+      #navmenu ul li a.active {
+        background-color: #ff6600;
+        /* Highlight color on hover */
+        color: white;
+      }
+    }
 .aaaa {
   display: flex;
   justify-content: center;
@@ -372,8 +409,9 @@ table.product-table td, table.product-table th {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
     margin: 0;
+    margin-bottom: 50px;
 }
 
 .row {
