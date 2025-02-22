@@ -421,8 +421,7 @@ h6 {
   color: white;
   background-color: #333;
   font-size: 14px;
-  padding-bottom: 50px;
-  position: relative;
+  position: absolute;
 }
 
 .footer .footer-top {
